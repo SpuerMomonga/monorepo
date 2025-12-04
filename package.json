@@ -1,0 +1,21 @@
+{
+  "name": "root",
+  "type": "module",
+  "private": true,
+  "packageManager": "pnpm@10.0.0",
+  "license": "MIT",
+  "engines": {
+    "pnpm": ">=10.0.0",
+    "node": ">=22.0.0"
+  },
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {
+    "@antfu/eslint-config": "^6.4.1",
+    "@types/node": "^22.19.1",
+    "eslint": "^9.39.1",
+    "eslint-plugin-format": "^1.1.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.6"
+  }
+}

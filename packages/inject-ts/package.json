@@ -1,0 +1,13 @@
+{
+  "name": "@monorepo/inject-ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "run": "vite build && node dist/index.js"
+  },
+  "dependencies": {
+    "inversify": "^7.10.5",
+    "reflect-metadata": "^0.2.2"
+  },
+  "devDependencies": {}
+}
