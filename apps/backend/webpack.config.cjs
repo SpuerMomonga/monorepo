@@ -11,7 +11,7 @@ module.exports = {
     chunkFormat: 'module',
     clean: true,
   },
-  target: 'node22.18',
+  target: 'electron39.2-main',
   module: {
     rules: [
       {

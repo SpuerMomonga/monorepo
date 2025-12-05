@@ -1,0 +1,11 @@
+{
+  "name": "@monorepo/frontend",
+  "type": "module",
+  "private": true,
+  "scripts": {
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}

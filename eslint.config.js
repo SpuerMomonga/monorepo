@@ -17,6 +17,8 @@ export default antfu(
       '@typescript-eslint/no-redeclare': 'off',
       'ts/no-unsafe-function-type': 'off',
       'pnpm/json-enforce-catalog': 'off',
+      'pnpm/yaml-enforce-settings': 'off',
+      'pnpm/json-prefer-workspace-settings': 'off',
     },
     ignores: [
       // ...globs

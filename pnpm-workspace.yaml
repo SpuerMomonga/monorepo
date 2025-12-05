@@ -1,2 +1,6 @@
 packages:
   - 'packages/*'
+  - 'apps/*'
+
+catalog:
+  electron: ^39.2.5
