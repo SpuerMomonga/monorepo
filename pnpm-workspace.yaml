@@ -4,3 +4,4 @@ packages:
 
 catalog:
   electron: ^39.2.5
+  inversify: ^7.10.5

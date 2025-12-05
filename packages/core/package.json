@@ -1,1 +1,24 @@
-{}
+{
+  "name": "@monorepo/core",
+  "type": "module",
+  "private": true,
+  "exports": {
+    ".": {
+      "import": "./src/electron-main/index.ts"
+    },
+    "./electron-main": {
+      "import": "./src/electron-main/index.ts"
+    },
+    "./electron-node": {
+      "import": "./src/electron-node/index.ts"
+    },
+    "./electron-browser": {
+      "import": "./src/electron-browser/index.ts"
+    }
+  },
+  "scripts": {},
+  "dependencies": {
+    "inversify": "catalog:"
+  },
+  "devDependencies": {}
+}

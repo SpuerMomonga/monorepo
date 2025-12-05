@@ -7,7 +7,8 @@
     "dev": "webpack"
   },
   "dependencies": {
-    "inversify": "^7.10.5",
+    "@monorepo/core": "workspace:*",
+    "inversify": "catalog:",
     "reflect-metadata": "^0.2.2"
   },
   "devDependencies": {

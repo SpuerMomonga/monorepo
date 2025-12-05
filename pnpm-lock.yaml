@@ -9,6 +9,9 @@ catalogs:
     electron:
       specifier: ^39.2.5
       version: 39.2.5
+    inversify:
+      specifier: ^7.10.5
+      version: 7.10.5
 
 importers:
 
@@ -35,8 +38,11 @@ importers:
 
   apps/backend:
     dependencies:
+      '@monorepo/core':
+        specifier: workspace:*
+        version: link:../../packages/core
       inversify:
-        specifier: ^7.10.5
+        specifier: 'catalog:'
         version: 7.10.5(reflect-metadata@0.2.2)
       reflect-metadata:
         specifier: ^0.2.2
@@ -59,7 +65,11 @@ importers:
 
   apps/frontend: {}
 
-  packages/core: {}
+  packages/core:
+    dependencies:
+      inversify:
+        specifier: 'catalog:'
+        version: 7.10.5(reflect-metadata@0.2.2)
 
   packages/extension: {}
 
