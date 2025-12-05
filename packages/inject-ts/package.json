@@ -2,12 +2,17 @@
   "name": "@monorepo/inject-ts",
   "type": "module",
   "private": true,
+  "main": "dist/main.js",
   "scripts": {
-    "run": "vite build && node dist/index.js"
+    "dev": "webpack && node dist/main.js"
   },
   "dependencies": {
     "inversify": "^7.10.5",
     "reflect-metadata": "^0.2.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "ts-loader": "^9.5.4",
+    "webpack": "^5.103.0",
+    "webpack-cli": "^6.0.1"
+  }
 }
