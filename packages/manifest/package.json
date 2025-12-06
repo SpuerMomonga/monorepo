@@ -1,0 +1,9 @@
+{
+  "name": "@monorepo/manifest",
+  "type": "module",
+  "main": "./src/index.ts",
+  "scripts": {},
+  "dependencies": {
+    "zod": "^4.1.13"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "@monorepo/util",
+  "type": "module",
+  "main": "./src/index.ts",
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
+}

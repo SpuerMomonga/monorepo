@@ -19,6 +19,7 @@ export default antfu(
       'pnpm/json-enforce-catalog': 'off',
       'pnpm/yaml-enforce-settings': 'off',
       'pnpm/json-prefer-workspace-settings': 'off',
+      'ts/no-namespace': 'off',
     },
     ignores: [
       // ...globs

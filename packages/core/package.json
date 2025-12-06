@@ -5,6 +5,8 @@
   "main": "./src/index.ts",
   "scripts": {},
   "dependencies": {
+    "@monorepo/manifest": "workspace:*",
+    "@monorepo/util": "workspace:*",
     "inversify": "catalog:"
   },
   "devDependencies": {}
