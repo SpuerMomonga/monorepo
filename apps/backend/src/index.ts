@@ -1,14 +1,21 @@
+import { app } from 'electron'
+import { Container } from 'inversify'
+import electronMainApplicationModule from './electron-main'
+import { ElectronMainApplication } from './electron-main/electronMainApplication'
 import 'reflect-metadata'
 
 async function startup() {
-  const { app } = await import('electron')
-  const { Container } = await import('inversify')
+  if (!app.requestSingleInstanceLock()) {
+    app.quit()
+    process.exit(1)
+  }
 
   const container = new Container()
-  container.load()
+  container.load(electronMainApplicationModule)
 
   async function start() {
-
+    const application = container.get(ElectronMainApplication)
+    await application.startup()
   }
 
   try {
