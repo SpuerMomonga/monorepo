@@ -20,6 +20,7 @@ export default antfu(
       'pnpm/yaml-enforce-settings': 'off',
       'pnpm/json-prefer-workspace-settings': 'off',
       'ts/no-namespace': 'off',
+      'unicorn/error-message': 'off',
     },
     ignores: [
       // ...globs

@@ -7,7 +7,7 @@
   "dependencies": {
     "@monorepo/manifest": "workspace:*",
     "@monorepo/util": "workspace:*",
-    "inversify": "catalog:"
-  },
-  "devDependencies": {}
+    "inversify": "catalog:",
+    "p-debounce": "^5.1.0"
+  }
 }

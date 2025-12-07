@@ -76,6 +76,9 @@ importers:
       inversify:
         specifier: 'catalog:'
         version: 7.10.5(reflect-metadata@0.2.2)
+      p-debounce:
+        specifier: ^5.1.0
+        version: 5.1.0
 
   packages/manifest:
     dependencies:
@@ -1845,6 +1848,10 @@ packages:
   p-cancelable@2.1.1:
     resolution: {integrity: sha512-BZOr3nRQHOntUjTrH8+Lh54smKHoHyur8We1V8DSMVrl5A2malOOwuJRnKRDjSnkoeBh4at6BwEnb5I7Jl31wg==}
     engines: {node: '>=8'}
+
+  p-debounce@5.1.0:
+    resolution: {integrity: sha512-3DNQmB7HPRMSuZ9P8JQFzEr7156s1S5Lqpi3mSrsZe5AHvl4ONfGrdB5azWqeOpNejQiemgQBkyU+IDKR5nwyg==}
+    engines: {node: '>=20'}
 
   p-limit@2.3.0:
     resolution: {integrity: sha512-//88mFWSJx8lxCzwdAABTJL2MyWB12+eIY7MDL2SqLmAkeKU9qxRvWuSyTjm3FUmpBEMuFfckAIqEaVGUDxb6w==}
@@ -4323,6 +4330,8 @@ snapshots:
       word-wrap: 1.2.5
 
   p-cancelable@2.1.1: {}
+
+  p-debounce@5.1.0: {}
 
   p-limit@2.3.0:
     dependencies:
