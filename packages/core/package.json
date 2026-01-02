@@ -2,9 +2,19 @@
   "name": "@monorepo/core",
   "type": "module",
   "private": true,
-  "main": "./src/index.ts",
+  "exports": {
+    "./browser": {
+      "types": "./src/browser/index.ts",
+      "import": "./src/browser/index.ts"
+    }
+  },
+  "main": "./src/common/index.ts",
+  "types": "./src/common/index.ts",
   "scripts": {},
   "dependencies": {
+    "@lumino/commands": "^2.3.3",
+    "@lumino/messaging": "^2.0.4",
+    "@lumino/widgets": "^2.7.2",
     "@monorepo/manifest": "workspace:*",
     "@monorepo/util": "workspace:*",
     "inversify": "catalog:",

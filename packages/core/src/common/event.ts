@@ -1,7 +1,7 @@
 import type { MaybePromise } from '@monorepo/util'
 import type { Disposable } from './disposable'
 import { CancellationToken } from './cancellation'
-import { DisposableCollection, DisposableGroup } from './disposable'
+import { DisposableGroup } from './disposable'
 
 export interface Event<T> {
   (listener: (e: T) => any, thisArgs?: any, disposables?: DisposableGroup): Disposable

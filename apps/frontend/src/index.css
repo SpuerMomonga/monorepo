@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+
+@source '../node_modules/@monorepo/core';
+
+.raykit-application-shell {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ccc;
+}

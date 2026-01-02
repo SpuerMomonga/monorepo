@@ -9,7 +9,7 @@
     "node": ">=22.0.0"
   },
   "scripts": {
-    "dev": "pnpm -F @monorepo/backend dev",
+    "dev": "pnpm -F @monorepo/frontend dev",
     "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
@@ -17,6 +17,7 @@
     "@types/node": "^22.19.1",
     "eslint": "^9.39.1",
     "eslint-plugin-format": "^1.1.0",
+    "eslint-plugin-solid": "^0.14.5",
     "typescript": "^5.9.3",
     "vite": "^7.2.6"
   },

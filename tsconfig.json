@@ -15,10 +15,12 @@
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "noEmit": true,
     // "noEmit": true,
     "isolatedModules": true,
     "skipLibCheck": true
   },
-  "include": ["**/*.ts", "**/*.d.ts"],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }

@@ -3,9 +3,19 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "dev": "vite"
   },
   "dependencies": {
+    "@monorepo/core": "workspace:*",
+    "inversify": "catalog:",
+    "reflect-metadata": "^0.2.2",
+    "solid-js": "^1.9.10"
   },
   "devDependencies": {
+    "@swc/core": "^1.15.8",
+    "@tailwindcss/vite": "^4.1.18",
+    "tailwindcss": "^4.1.18",
+    "unplugin-swc": "^1.5.9",
+    "vite-plugin-solid": "^2.11.10"
   }
 }
