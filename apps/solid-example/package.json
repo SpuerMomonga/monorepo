@@ -1,0 +1,24 @@
+{
+  "name": "@monorepo/solid-example",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "@lumino/messaging": "^2.0.4",
+    "@lumino/widgets": "^2.7.2",
+    "inversify": "catalog:",
+    "reflect-metadata": "^0.2.2",
+    "solid-js": "^1.9.10"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.5",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-decorators": "^7.28.0",
+    "@swc/core": "^1.15.8",
+    "tailwindcss": "^4.1.18",
+    "unplugin-swc": "^1.5.9",
+    "vite-plugin-solid": "^2.11.10"
+  }
+}

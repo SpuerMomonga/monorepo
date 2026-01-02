@@ -1,12 +1,13 @@
-import { FrontendApplication, frontendApplicationModule } from '@monorepo/core/browser'
 import { Container } from 'inversify'
+import { Application } from './application'
+import { HelloWorld } from './hello-world'
 import 'reflect-metadata'
-import './index.css'
 
 (async () => {
   const container = new Container()
 
-  container.loadSync(frontendApplicationModule)
+  container.bind(HelloWorld).toSelf().inSingletonScope()
+  container.bind(Application).toSelf().inSingletonScope()
 
   try {
     await start()
@@ -18,6 +19,6 @@ import './index.css'
   }
 
   function start() {
-    return container.get(FrontendApplication).startup()
+    return container.get(Application).start()
   }
 })()
