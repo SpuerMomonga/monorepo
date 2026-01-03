@@ -10,7 +10,7 @@
   },
   "scripts": {
     "dev": "pnpm -F @monorepo/frontend dev",
-    "dev:solid": "pnpm -F @monorepo/solid-example dev",
+    "dev:solid": "pnpm -F @monorepo/solid-widget dev",
     "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
