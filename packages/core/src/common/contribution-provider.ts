@@ -1,4 +1,4 @@
-import type { Bind, Container, ResolutionContext, ServiceIdentifier } from 'inversify'
+import type { Container, ContainerModuleLoadOptions, ResolutionContext, ServiceIdentifier } from 'inversify'
 
 export const ContributionProvider = Symbol('ContributionProvider')
 
@@ -34,15 +34,10 @@ class ContainerBasedContributionProvider<T extends object> implements Contributi
   }
 }
 
-export type Bindable = Bind | Container
-export namespace Bindable {
-  export function isContainer(arg: Bindable): arg is Container {
-    return typeof arg !== 'function' && ('bind' in arg || 'load' in arg)
-  }
-}
+export type Bindable = ContainerModuleLoadOptions | Container
 
 export function bindContributionProvider(bindable: Bindable, id: symbol): void {
-  const bindingToSyntax = (Bindable.isContainer(bindable) ? bindable.bind(ContributionProvider) : bindable(ContributionProvider))
+  const bindingToSyntax = bindable.bind(ContributionProvider)
   bindingToSyntax
     .toDynamicValue(ctx => new ContainerBasedContributionProvider(id, ctx))
     .inSingletonScope()

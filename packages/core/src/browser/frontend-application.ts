@@ -1,10 +1,14 @@
 import { Widget } from '@lumino/widgets'
-import { inject, injectable } from 'inversify'
+import { inject, injectable, named } from 'inversify'
+import { ContributionProvider } from '../common/contribution-provider'
+import { FrontendApplicationContribution } from './frontend-application-contribution'
 import { ApplicationShell } from './shell'
 
 @injectable()
 export class FrontendApplication {
   constructor(
+    @inject(ContributionProvider) @named(FrontendApplicationContribution)
+    protected readonly contributions: ContributionProvider<FrontendApplicationContribution>,
     @inject(ApplicationShell) protected readonly _shell: ApplicationShell,
   ) { }
 
@@ -16,6 +20,8 @@ export class FrontendApplication {
    * Start the frontend application.
    */
   async startup(): Promise<void> {
+    await this.startContributions()
+
     const host = await this.getHost()
     this.attachShell(host)
   }
@@ -31,5 +37,17 @@ export class FrontendApplication {
 
   protected attachShell(host: HTMLElement): void {
     Widget.attach(this.shell, host)
+  }
+
+  protected async startContributions(): Promise<void> {
+    for (const contribution of this.contributions.getContributions()) {
+      if (contribution.initialize) {
+        try {
+          contribution.initialize()
+        } catch (error) {
+          console.error('Could not initialize contribution', error)
+        }
+      }
+    }
   }
 }
